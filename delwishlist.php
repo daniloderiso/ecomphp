@@ -8,7 +8,7 @@ if(!isset($_SESSION['customer']) & empty($_SESSION['customer'])){
 	}
 if(isset($_GET['id']) & !empty($_GET['id'])){
 	$id = $_GET['id'];
-	echo $sql = "DELETE FROM wishlist WHERE id=$id";
+	echo $sql = "DELETE FROM wishlistname WHERE id=$id";
 	$res = mysqli_query($connection, $sql);
 	if($res){
 		header('location: wishlist.php');

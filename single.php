@@ -91,14 +91,15 @@ if(isset($_POST) & !empty($_POST)){
 							<select name="listname" id="listname" class="form-control" onchange="toggle('listname', 'newlistname');">
 								<option value="">New List</option>
 							<?php
-								$wishnamesql = "SELECT nome FROM wishlistname WHERE uid='$uid' group by nome";
+								$numeroliste = 1;
+								$wishnamesql = "SELECT nome  FROM wishlistname WHERE uid='$uid' group by nome";
 								$wishnameres = mysqli_query($connection, $wishnamesql);
 								while($wishnamer = mysqli_fetch_assoc($wishnameres)){
 								?>
 								<option value="<?php echo $wishnamer['nome']; ?>"><?php echo $wishnamer['nome']; ?></option>
-							<?php } ?>
+							<?php $numeroliste += 1;} ?>
 							</select>
-							<input type="text" name="newlistname" id="newlistname" placeholder="">
+							<input type="text" name="newlistname" id="newlistname" placeholder="New list <?php echo $numeroliste; ?>" value="New list <?php echo $numeroliste; ?>">
 							</div>
 							
 							<!-- pid -->
