@@ -21,6 +21,7 @@
 						<a href="#">My Account</a>
 						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
 						<ul>
+							<li><a href="http://localhost/ecomphp/login.php">Login</a></li>
 							<li><a href="http://localhost/ecomphp/my-account.php">My Orders</a></li>
 							<li><a href="http://localhost/ecomphp/edit-address.php">Update Address</a></li>
 							<li><a href="http://localhost/ecomphp/logout.php">Logout</a></li>
