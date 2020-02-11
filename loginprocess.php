@@ -14,7 +14,7 @@ if(isset($_POST) & !empty($_POST)){
 			//echo "User exits, create session";
 			$_SESSION['customer'] = $email;
 			$_SESSION['customerid'] = $r['id'];
-			header("location: checkout.php");
+			header("location: index.php");
 		}else{
 			//$fmsg = "Invalid Login Credentials";
 			header("location: login.php?message=1");
